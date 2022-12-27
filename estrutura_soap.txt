@@ -1,0 +1,32 @@
+<!-- Request - Requisição: -->
+
+POST /consuktaCliente HTTP/1.1
+Host: www.minhaempresa.com
+Content-Type: application/soap+xml; charset=utf-8
+Content-Lenght: nnn
+
+<soap:Envelop 
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelop/">
+    <soap:Body xmlns:m="http://minhaempresa.com/consultaCliente">
+        <m:consultaClienteRequest>
+            <m:cpf>12345678910</m:cpf>
+        </m:consultaClienteRequest>
+    </soap:Body>
+</soap:Envelop>
+
+<!-- Response - Resposta: -->
+
+HTTP/1.1 200 ok
+Content-Type: application/soap+xml; charset=utf-8
+Content-Lenght: nnn
+
+<soap:Envelop 
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelop/">
+    <soap:Body xmlns:m="http://minhaempresa.com/consultaCliente">
+        <m:consultaClienteresponse>
+            <m:nome>Paulo</m:nome>
+            <m:endereco>Rua 15</m:endereco>
+            <m:telefone>(00)12345-6789</m:telefone>
+        </m:consultaClienteresponse>
+    </soap:Body>
+</soap:Envelop>
